@@ -1,0 +1,63 @@
+
+.header{
+    text-align: center;
+    background-color: #FFE4E1;
+    padding-block: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    grid-area: hd;
+}
+body{
+    background-color: #FFFAFA;
+    padding: 50px;
+    font-family: 'Open Sans', sans-serif;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: 
+        "hd hd hd hd hd"
+        "nv nv nv nv nv"
+        "ci ci ct ct ct"
+        "ci ci ct ct ct"
+        "ft ft ft ft ft";
+}
+/*Nav bar*/ 
+.navbar{
+    padding-block: 15px;
+    background-color: white;
+    text-align: center;
+    grid-area: nv;
+}
+/* li {
+    display: inline;
+    padding: 30px; 
+  }*/
+  button{
+      background-color: white; 
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      padding: 15px;
+  }
+  button:hover{
+      background-color: #BC8F8F;
+  }
+  .card{
+      background-color: #BC8F8F;
+      padding: 50px;
+      grid-area: card; 
+      object-fit: contain; 
+  }
+  .cardImage{
+      grid-area: ci;
+      height: 250px;
+      width: 175px; 
+
+  }
+  .cardText{
+        gird-area: ct;
+  }
+  .footer{
+      grid-area: ft; 
+  }
