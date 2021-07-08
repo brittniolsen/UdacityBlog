@@ -1,25 +1,27 @@
+@import "MediaQueriesPhone.css";
+@import "MediaQueriesTablet.css";
+@import "HeaderStyling.css";
 
-.header{
-    text-align: center;
-    background-color: #FFE4E1;
-    padding-block: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    grid-area: hd;
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(.25fr .50fr 1fr 1fr 1fr .50fr);
+    row-gap: 15px;
+    grid-template-areas:
+        "hd hd hd hd hd hd"
+        "nv nv nv nv nv nv"
+        "card1 card1 card1 card1 card1 card1"
+        "card2 card2 card2 card2 card2 card2"
+        "card3 card3 card3 card3 card3 card3"
+        "ft ft ft ft ft ft";
 }
+
 body{
     background-color: #FFFAFA;
-    padding: 50px;
+    /* padding: 50px; */
     font-family: 'Open Sans', sans-serif;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
-    grid-template-areas: 
-        "hd hd hd hd hd"
-        "nv nv nv nv nv"
-        "ci ci ct ct ct"
-        "ci ci ct ct ct"
-        "ft ft ft ft ft";
 }
+
 /*Nav bar*/ 
 .navbar{
     padding-block: 15px;
@@ -27,37 +29,75 @@ body{
     text-align: center;
     grid-area: nv;
 }
-/* li {
+
+li {
     display: inline;
     padding: 30px; 
-  }*/
-  button{
-      background-color: white; 
-      text-align: center;
-      display: inline-block;
-      font-size: 16px;
-      border: none;
-      outline: none;
-      padding: 15px;
-  }
-  button:hover{
-      background-color: #BC8F8F;
-  }
-  .card{
-      background-color: #BC8F8F;
-      padding: 50px;
-      grid-area: card; 
-      object-fit: contain; 
-  }
-  .cardImage{
-      grid-area: ci;
-      height: 250px;
-      width: 175px; 
+}
 
-  }
-  .cardText{
-        gird-area: ct;
-  }
-  .footer{
-      grid-area: ft; 
-  }
+button {
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+button:hover{
+    background-color: #BC8F8F;
+}
+
+.card1{
+    background-color: #BC8F8F;
+    padding: 50px;
+    grid-area: card1; 
+    object-fit: contain; 
+}
+
+.card2{
+    background-color: #FFE4E1;
+    padding: 50px;
+    grid-area: card2; 
+    object-fit: contain; 
+}
+
+.card3{
+    background-color: #BC8F8F;
+    padding: 50px;
+    grid-area: card3; 
+    object-fit: contain;
+}
+
+.cardLayout{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+.cardImage{
+    height: 250px;
+    width: auto; 
+    grid-area: ci;
+    padding-right: 15px;
+}
+
+.cardText{
+    align-content: center;
+    width: 3fr;
+}
+
+.footer{
+    grid-area: ft;
+}
+
+.blogPost{
+    grid-area:card1;
+}
+
+a:visited { 
+    text-decoration: none; 
+    color: black;
+}
